@@ -1,0 +1,7 @@
+background.js : handle the change of day, keep track of days
+franceData.json : holds the data for each day, popup.js pulls from it
+popup.js : change the dom of popup.html, background.js changes the day
+
+background script updates at 12am and tells popup.js to change
+the dom of popup.html, changeing the french word, english word, 
+french sentence, and english sentence. 

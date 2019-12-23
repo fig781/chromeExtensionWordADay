@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Word A Day</title>
+    <style>
+      body{
+        margin:0px;
+        padding: 0px;
+        width: 375px;
+        height: 100px;
+      }
+      #heading-box h1{
+        display: inline;
+      }
+      #words-box h2,h3{
+        display:inline;
+      }
+      #foreign-sentence-box h2,p{
+        display:inline;
+      }
+      #english-sentence-box h2,p{
+        display:inline;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div id='heading-box'>
+        <h1 id='language'>French</h1>
+        <h1> Word of the Day</h1>
+    </div>
+    <div id='words-box'>
+        <h2 id='foreign-word'>Poisson</h2><h2>:</h2>
+        <h2 id='english-word'>Fish</h2>
+    </div>
+    
+    <div id='foreign-sentence-box'>
+        <h2 id='foreign-sentence'>In a Sentence:</h2>
+        <p id='foreign-sentence-change'>Le poisson a nagé dans l'eau.</p>
+    </div>
+    <div id='english-sentence-box'>
+        <h2 id='english-sentence'>In English:</h2>
+        <p id='english-sentence-change'>The fish swam through the water.</p>
+    </div>
+    
+    <script src='franceData.json'></script>
+    <script src='popup.js'></script>
+  </body>
+  
+</html>
