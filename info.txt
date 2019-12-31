@@ -5,3 +5,109 @@ popup.js : change the dom of popup.html, background.js changes the day
 background script updates at 12am and tells popup.js to change
 the dom of popup.html, changeing the french word, english word, 
 french sentence, and english sentence. 
+
+
+list of words
+
+Room
+Welcome, this is my room.
+
+Refrigerator
+Open the refrigerator to get the food.
+
+Laptop
+I use my laptop to go on the internet.
+
+Air Conditioner
+The air conditioner makes the room colder.
+
+Nurse
+Welcome to the hospital, the nurse will see you now.
+
+Credit Card
+Swipe your credit card to complete the purchase.
+
+Receipt
+Here is your receipt.
+
+Flight Attendant
+Hello everyone, I am your flight attendant.
+
+Name
+My name is John. What is your name?
+
+University
+I go to university in the United States.
+
+Running
+The boy is running fast.
+
+Wage
+My hourly wage is $10.
+
+Seat
+You may have my seat. I like standing.
+
+Flight
+Your flight will be leaving at 8am.
+
+Boarding Gate
+The boarding gate is A18. 
+
+Luggage
+The luggage pick up area is on the first floor.
+
+Fish
+On the menu we have fish.
+
+Medicine
+You can go to the hospital and get medicine.
+
+Business
+My place of business is for sale.
+
+Dog
+My dog's name is Jake.
+
+Sale
+This item is on sale for 20% off.
+
+Allergy
+I have an allergy towards dogs.
+
+Departure
+Our train departure is at 10am.
+
+Arrival
+Our plane arrival time is on Monday.
+
+Flu
+I came to this country and got the flu.
+
+Reservation
+We want to make a reservation for 6pm.
+
+Car
+My car is red. My car is also fast.
+
+Boxing
+Boxing is a very important sport in my country.
+
+Cycling
+We are going cycling with some friends.
+
+Reading
+When I have some time, I like to do some reading.
+
+
+To Do:
+ X make the name of language in the popup show the correct set language
+ X make the data bases
+ X make popup close when you click off of it
+ - make option close when you click off of them or something like that
+ - make the options say saved when you click saved
+ - style the popup correctly
+ - make the google extension store information
+ - find a new icon set and name for the extension
+ - double check the updating of the changing language
+ X make the 30 words loop

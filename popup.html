@@ -7,14 +7,27 @@
       body{
         margin:0px;
         padding: 0px;
-        width: 375px;
-        height: 100px;
+        width: 550px;
+        height: 300px;
+        background-color:#F7F9FB
+      }
+      #content{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid black;
       }
       #heading-box h1{
-        display: inline;
+        text-align: center;
+        display:inline;
+        margin-bottom: 10px;
       }
       #words-box h2,h3{
         display:inline;
+        margin-bottom: 8px;
       }
       #foreign-sentence-box h2,p{
         display:inline;
@@ -22,30 +35,37 @@
       #english-sentence-box h2,p{
         display:inline;
       }
+      p{
+        font-size: medium;
+      }
     
     </style>
   </head>
   <body>
-    <div id='heading-box'>
-        <h1 id='language'>French</h1>
-        <h1> Word of the Day</h1>
-    </div>
-    <div id='words-box'>
-        <h2 id='foreign-word'>Poisson</h2><h2>:</h2>
-        <h2 id='english-word'>Fish</h2>
-    </div>
-    
-    <div id='foreign-sentence-box'>
-        <h2 id='foreign-sentence'>In a Sentence:</h2>
-        <p id='foreign-sentence-change'>Le poisson a nagé dans l'eau.</p>
-    </div>
-    <div id='english-sentence-box'>
-        <h2 id='english-sentence'>In English:</h2>
-        <p id='english-sentence-change'>The fish swam through the water.</p>
-    </div>
-    
-    <script src='franceData.json'></script>
     <script src='popup.js'></script>
+    <div id="content">
+      <div id='heading-box'>
+          <h1 id='language'>Test</h1>
+          <h1> Word of the Day</h1>
+      </div>
+      <div id='words-box'>
+          <h2 id='foreign-word'>Test</h2><h2>:</h2>
+          <h2 id='english-word'>Test</h2>
+      </div>
+      
+      <div id='foreign-sentence-box'>
+          <h2 id='foreign-sentence'>In a Sentence:</h2>
+          <p id='foreign-sentence-change'>Test test test test test test</p>
+      </div>
+      <div id='english-sentence-box'>
+          <h2 id='english-sentence'>In English:</h2>
+          <p id='english-sentence-change'>Test Test Test Test Test</p>
+      </div>
+    </div>
+    
+    
+    
+    
   </body>
   
 </html>

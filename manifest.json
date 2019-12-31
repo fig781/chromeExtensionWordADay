@@ -4,7 +4,11 @@
     "version": "0.1",
     "description": "Learn french words",
     "author": "Aden Eilers",
-    "permissions": ["storage"],
+    "permissions": ["alarms","storage","tabs"],
+    "options_ui": {
+      "page": "options.html",
+      "oper_in_tab": false
+    },
     "background": {
         "scripts": ["background.js"],
         "persistent": false
