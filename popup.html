@@ -7,9 +7,10 @@
       body{
         margin:0px;
         padding: 0px;
-        width: 550px;
-        height: 300px;
-        background-color:#F7F9FB
+        width: 640px;
+        height: 180px;
+        background-color:rgb(241, 241, 238);
+        
       }
       #content{
         margin: 0;
@@ -18,16 +19,41 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-        border: 2px solid black;
+        
+      }
+
+
+      #heading-box{
+        text-align: center;
+        margin-bottom: 2px;
+        padding-bottom:8px;
+        border-bottom: 1px solid black;
       }
       #heading-box h1{
-        text-align: center;
         display:inline;
-        margin-bottom: 10px;
       }
-      #words-box h2,h3{
+      #language{
+        color:slateblue;
+      }
+
+
+      #words-box{
+        margin-bottom: 6px;
+        text-align: center;
+      }
+      #words-box h1{
         display:inline;
-        margin-bottom: 8px;
+      }
+      #foreign-word{
+        
+      }
+      #english-word{
+        
+      }
+
+
+      #foreign-sentence-box{
+        margin-bottom: 6px;
       }
       #foreign-sentence-box h2,p{
         display:inline;
@@ -35,6 +61,8 @@
       #english-sentence-box h2,p{
         display:inline;
       }
+
+
       p{
         font-size: medium;
       }
@@ -45,21 +73,22 @@
     <script src='popup.js'></script>
     <div id="content">
       <div id='heading-box'>
+          <h1>Hello, this is your </h1>
           <h1 id='language'>Test</h1>
-          <h1> Word of the Day</h1>
+          <h1> word of the day:</h1>
       </div>
       <div id='words-box'>
-          <h2 id='foreign-word'>Test</h2><h2>:</h2>
-          <h2 id='english-word'>Test</h2>
+          <h1 id='foreign-word'>Something isnt working</h1><h1>: </h1>
+          <h1 id='english-word'></h1>
       </div>
       
       <div id='foreign-sentence-box'>
           <h2 id='foreign-sentence'>In a Sentence:</h2>
-          <p id='foreign-sentence-change'>Test test test test test test</p>
+          <p id='foreign-sentence-change'></p>
       </div>
       <div id='english-sentence-box'>
           <h2 id='english-sentence'>In English:</h2>
-          <p id='english-sentence-change'>Test Test Test Test Test</p>
+          <p id='english-sentence-change'></p>
       </div>
     </div>
     

@@ -6,6 +6,21 @@ background script updates at 12am and tells popup.js to change
 the dom of popup.html, changeing the french word, english word, 
 french sentence, and english sentence. 
 
+Things to add in the future maybe
+ - options menu says SAVED when you save something
+ - Find way of adding more languages easily
+ - Add the promotianal banners
+ - add more langauges
+  - Portchugese
+  - Italian
+  - Greek
+  - Malay
+  - Manadrine chinese
+  - Arabic
+  - Sweedish
+  - Finish
+ - Overhaule the popup ui and options ui
+
 
 list of words
 
@@ -100,14 +115,3 @@ Reading
 When I have some time, I like to do some reading.
 
 
-To Do:
- X make the name of language in the popup show the correct set language
- X make the data bases
- X make popup close when you click off of it
- - make option close when you click off of them or something like that
- - make the options say saved when you click saved
- - style the popup correctly
- - make the google extension store information
- - find a new icon set and name for the extension
- - double check the updating of the changing language
- X make the 30 words loop
