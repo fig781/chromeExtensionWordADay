@@ -2,9 +2,11 @@
 //runs on first install
 chrome.runtime.onInstalled.addListener(function(details){
     if(details.reason === "install"){
-        chrome.storage.sync.set({'dayId': 0, 'language':'Spanish'}, function(result){
+        chrome.storage.sync.set({'dayId': 0, 'language':'French'}, function(result){
             console.log(`Extension first installed dayId set to ${result.dayId} language set to ${result.language}`)
         })
+        //opens options page on initial install
+        chrome.runtime.openOptionsPage()
     }
 })
 
@@ -30,10 +32,15 @@ chrome.storage.sync.get(['storedDayOfMonth'], function(result) {
                 console.log('day id now set to '+ dayIncrease);
             });
         })
-
+        //adds the badge
+        chrome.browserAction.setBadgeBackgroundColor({color: '#8086FF'});
+        chrome.browserAction.setBadgeText({text:'+1'});
     }else {
         console.log('They the same')
     }
+    
+    
+ 
 })
  
     
@@ -64,10 +71,14 @@ chrome.alarms.onAlarm.addListener(function(){
                     console.log('day id now set to '+ dayIncrease);
                 });
             })
-    
+
+            //adds the badge 
+            chrome.browserAction.setBadgeBackgroundColor({color: '#8086FF'});
+            chrome.browserAction.setBadgeText({text:'+1'});
         }else {
             console.log('They the same')
         }
+        
     })
 })
 

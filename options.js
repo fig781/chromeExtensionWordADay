@@ -26,7 +26,7 @@ function restoreOptions() {
         for (var i = 0, length = radios.length; i < length; i++) {
             if (value.language === radios[i].value) {
                 document.getElementById(value.language).checked = true;
-                document.getElementById('setTo').innerHTML = value.language;
+                
                 break;
             }
         }   

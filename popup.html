@@ -66,11 +66,22 @@
       p{
         font-size: medium;
       }
-    
+      #options{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height:24px;
+        width:24px;
+        
+      }
+      #options:hover{
+        transition: 1.0s;
+        transform: rotateZ(180deg);
+      }
     </style>
   </head>
   <body>
-    <script src='popup.js'></script>
+    
     <div id="content">
       <div id='heading-box'>
           <h1>Hello, this is your </h1>
@@ -91,9 +102,9 @@
           <p id='english-sentence-change'></p>
       </div>
     </div>
+    <input  type="image" id="options" src="optionsIcon.png"></input>
     
-    
-    
+    <script src='popup.js'></script>
     
   </body>
   

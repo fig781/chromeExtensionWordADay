@@ -5,10 +5,10 @@
     <title>Options</title>
     <style>
       form{
-        font-size: large;
+        font-size:x-large;
       }
       button{
-        font-size: large;
+        font-size: x-large;
       }
       #saved p{
         display: inline;
@@ -22,17 +22,22 @@
   <body>
     <h1>What Language Do You Want to Practice</h1>
     <form>
-        <input id="French" type="radio"  name="language" value="French"> French<br>
-        <input id="Spanish" type="radio"  name="language" value="Spanish"> Spanish<br>
-        <input id="German" type="radio"  name="language" value="German"> German<br>
-        <input id="Russian" type="radio"  name="language" value="Russian"> Russian<br><br>
+        <input id="French" type="radio"  name="language" value="French">
+        <label for="French">French</label>
+        <br>
+        <input id="Spanish" type="radio"  name="language" value="Spanish">
+        <label for="Spanish">Spanish</label>
+        <br>
+        <input id="German" type="radio"  name="language" value="German">
+        <label for="German">German</label>
+        <br>
+        <input id="Russian" type="radio"  name="language" value="Russian">
+        <label for="Russian">Russian</label>
+        <br><br>
         
         <button id="save">Save</button>
       </form> 
-      <div id="saved">
-        <p>Current Language: </p>
-        <strong><p id="setTo"></p></strong>
-      </div>
+      
       
       <script src="options.js"></script>
   </body>

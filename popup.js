@@ -921,5 +921,17 @@ window.onload = chrome.storage.sync.get(['language'], function(languageResult) {
         document.getElementById('foreign-sentence-change').innerHTML = foreignSentence;
         document.getElementById('english-sentence-change').innerHTML = englishSentence;
     })    
+    
+    //gets rid of the badge
+    chrome.browserAction.setBadgeText({text:''});
+    
 });
+
+//options button 
+window.onload = function(){
+    document.querySelector('#options').addEventListener("click", function() {   
+        chrome.runtime.openOptionsPage();     
+    });
+}    
+
 
