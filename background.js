@@ -2,8 +2,8 @@
 //runs on first install
 chrome.runtime.onInstalled.addListener(function(details){
     if(details.reason === "install"){
-        chrome.storage.sync.set({'dayId': 0, 'language':'French'}, function(result){
-            console.log(`Extension first installed dayId set to ${result.dayId} language set to ${result.language}`)
+        chrome.storage.sync.set({'language':'French', 'storedDayOfMonth': 1}, function(result){
+            console.log(`Extension first installed language set to ${result.language}, storedDayOfMonth set to ${result.storedDayOfMonth}`)
         })
         //opens options page on initial install
         chrome.runtime.openOptionsPage()
@@ -13,74 +13,35 @@ chrome.runtime.onInstalled.addListener(function(details){
  
 chrome.storage.sync.get(['storedDayOfMonth'], function(result) {
 
+    //Gets the storede day of month so it can compare to the current day of month
     let storedDayOfMonth = result.storedDayOfMonth;
     console.log('Initial stored day of month ' + storedDayOfMonth)
 
+    //Get Date of Month
     let day = new Date()
     let actualDayOfMonth = day.getDate()
     console.log('Actual day of month '+ actualDayOfMonth)
     console.log(day)
     
+    //Sets the new day of the month in storage
     if(storedDayOfMonth !== actualDayOfMonth){
         console.log('Not the same')
-        chrome.storage.sync.get(['dayId'], function(result) {
 
-            let dayIncrease = result.dayId + 1
-
-            chrome.storage.sync.set({'storedDayOfMonth': actualDayOfMonth, 'dayId': dayIncrease}, function() {
-                console.log('stored day of month is set to ' + actualDayOfMonth);
-                console.log('day id now set to '+ dayIncrease);
-            });
-        })
+        chrome.storage.sync.set({'storedDayOfMonth': actualDayOfMonth}, function() {
+            console.log('stored day of month is set to ' + actualDayOfMonth);
+        });
+        
         //adds the badge
         chrome.browserAction.setBadgeBackgroundColor({color: '#8086FF'});
         chrome.browserAction.setBadgeText({text:'+1'});
     }else {
         console.log('They the same')
     }
-    
-    
- 
 })
  
     
   
 
-//the alarm function that happens every hour
-chrome.alarms.create({delayInMinutes: 0.1, periodInMinutes: 60})
-
-chrome.alarms.onAlarm.addListener(function(){
-    chrome.storage.sync.get(['storedDayOfMonth'], function(result) {
-        let storedDayOfMonth = result.storedDayOfMonth;
-        console.log('Initial stored day of month ' + storedDayOfMonth)
-    
-        let day = new Date()
-        
-        let actualDayOfMonth = day.getDate()
-        console.log('Actual day of month '+ actualDayOfMonth)
-        console.log(day);
-        
-        if(storedDayOfMonth !== actualDayOfMonth){
-            console.log('Not the same')
-            chrome.storage.sync.get(['dayId'], function(result) {
-    
-                let dayIncrease = result.dayId + 1
-    
-                chrome.storage.sync.set({'storedDayOfMonth': actualDayOfMonth, 'dayId': dayIncrease}, function() {
-                    console.log('stored day of month is set to ' + actualDayOfMonth);
-                    console.log('day id now set to '+ dayIncrease);
-                });
-            })
-
-            //adds the badge 
-            chrome.browserAction.setBadgeBackgroundColor({color: '#8086FF'});
-            chrome.browserAction.setBadgeText({text:'+1'});
-        }else {
-            console.log('They the same')
-        }
-        
-    })
-})
 
     
 

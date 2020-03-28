@@ -9,7 +9,7 @@ french sentence, and english sentence.
 Things to add in the future maybe
  - options menu says SAVED when you save something
  - Find way of adding more languages easily
- - Add the promotianal banners
+ X Add the promotianal banners
  - add more langauges
   - Portchugese
   - Italian

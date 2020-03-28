@@ -12,18 +12,14 @@ window.onload = chrome.storage.sync.get(['storedDayOfMonth'], function(result) {
     
     if(storedDayOfMonth !== actualDayOfMonth){
         console.log('Not the same')
-        chrome.storage.sync.get(['dayId'], function(result) {
 
-            let dayIncrease = result.dayId + 1
-
-            chrome.storage.sync.set({'storedDayOfMonth': actualDayOfMonth, 'dayId': dayIncrease}, function() {
-                console.log('stored day of month is set to ' + actualDayOfMonth);
-                console.log('day id now set to '+ dayIncrease);
-            });
-        })
-
+        chrome.storage.sync.set({'storedDayOfMonth': actualDayOfMonth}, function() {
+            console.log('stored day of month is set to ' + actualDayOfMonth);
+            
+        });
+        
     }else {
-        console.log('they the same')
+        console.log('The days are the same')
     }
 })
 
@@ -237,6 +233,13 @@ const frenchDataBase = [
         "englishWord": "Reading",
         "foreignSentence": "Quand j'ai du temps, j'aime faire de la lecture.",
         "englishSentence": "When I have some time, I like to do some reading."
+    },
+    {
+        "id": "31",
+        "foreignWord": "Chat/Chatte",
+        "englishWord": "Cat",
+        "foreignSentence": "Le chat a attrapé la souris.",
+        "englishSentence": "The cat caught the mouse."
     }
 ]
 
@@ -450,6 +453,13 @@ const spanishDataBase = [
         "englishWord": "Reading",
         "foreignSentence": "Cuando tengo algo de tiempo, me gusta leer un poco.",
         "englishSentence": "When I have some time, I like to do some reading."
+    },
+    {
+        "id": "31",
+        "foreignWord": "Gato/Gata",
+        "englishWord": "Cat",
+        "foreignSentence": "El gato atrapó al ratón.",
+        "englishSentence": "The cat caught the mouse."
     }
 ]
 
@@ -663,6 +673,13 @@ const germanDataBase = [
         "englishWord": "Reading",
         "foreignSentence": "Wenn ich etwas Zeit habe, lese ich gerne.",
         "englishSentence": "When I have some time, I like to do some reading."
+    },
+    {
+        "id": "31",
+        "foreignWord": "Katze",
+        "englishWord": "Cat",
+        "foreignSentence": "Die Katze fing die Maus auf.",
+        "englishSentence": "The cat caught the mouse."
     }
 ]
 
@@ -876,25 +893,26 @@ const russianDataBase = [
         "englishWord": "Reading",
         "foreignSentence": "Kogda u menya yest' vremya, ya lyublyu chitat'.",
         "englishSentence": "When I have some time, I like to do some reading."
+    },
+    {
+        "id": "31",
+        "foreignWord": "Chteniye",
+        "englishWord": "Cat",
+        "foreignSentence": "Kot poymal mysh'.",
+        "englishSentence": "The cat caught the mouse."
     }
+
 ]
 
 
 window.onload = chrome.storage.sync.get(['language'], function(languageResult) {
-    chrome.storage.sync.get(['dayId'], function(dayIdResult) {
-        let dayId = dayIdResult.dayId;
-        console.log(dayId)
-
-        if(dayId === 29){
-            chrome.storage.sync.set({'dayId': 0}, function() {
-                console.log('DayId reset to 0');
-              });
-            dayId = 0
-        }
+    chrome.storage.sync.get(['storedDayOfMonth'], function(storedDayOfMonthResult) {
+        let storedDayOfMonth = storedDayOfMonthResult.storedDayOfMonth;
+        console.log('storedDayOfMonth: '+ dayId)
 
         let languageChoice = languageResult.language
         let dataBase;
-        console.log(languageChoice)
+        console.log('Language selected: ' + languageChoice)
 
         if (languageChoice === "French"){
             dataBase = frenchDataBase   
@@ -911,10 +929,10 @@ window.onload = chrome.storage.sync.get(['language'], function(languageResult) {
         }
         else{console.log('how did this happen')}
         
-        let foreignWord = dataBase[dayId].foreignWord;
-        let englishWord = dataBase[dayId].englishWord;
-        let foreignSentence = dataBase[dayId].foreignSentence;
-        let englishSentence = dataBase[dayId].englishSentence;
+        let foreignWord = dataBase[storedDayOfMonth].foreignWord;
+        let englishWord = dataBase[storedDayOfMonth].englishWord;
+        let foreignSentence = dataBase[storedDayOfMonth].foreignSentence;
+        let englishSentence = dataBase[storedDayOfMonth].englishSentence;
     
         document.getElementById('foreign-word').innerHTML = foreignWord;
         document.getElementById('english-word').innerHTML = englishWord;
