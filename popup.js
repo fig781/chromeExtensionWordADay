@@ -908,7 +908,7 @@ const russianDataBase = [
 window.onload = chrome.storage.sync.get(['language'], function(languageResult) {
     chrome.storage.sync.get(['storedDayOfMonth'], function(storedDayOfMonthResult) {
         let storedDayOfMonth = storedDayOfMonthResult.storedDayOfMonth;
-        console.log('storedDayOfMonth: '+ dayId)
+        console.log('storedDayOfMonth: '+ storedDayOfMonth)
 
         let languageChoice = languageResult.language
         let dataBase;
@@ -928,16 +928,27 @@ window.onload = chrome.storage.sync.get(['language'], function(languageResult) {
             document.getElementById('language').innerHTML = "Russian"  
         }
         else{console.log('how did this happen')}
+
+        for(let i = 0; i < 31; i++){
+            if(dataBase[i].id == storedDayOfMonth){
+
+                let foreignWord = dataBase[i].foreignWord;
+                let englishWord = dataBase[i].englishWord;
+                let foreignSentence = dataBase[i].foreignSentence;
+                let englishSentence = dataBase[i].englishSentence;
+
+                document.getElementById('foreign-word').innerHTML = foreignWord;
+                document.getElementById('english-word').innerHTML = englishWord;
+                document.getElementById('foreign-sentence-change').innerHTML = foreignSentence;
+                document.getElementById('english-sentence-change').innerHTML = englishSentence;
+                break;
+            }
+            
+        }
         
-        let foreignWord = dataBase[storedDayOfMonth].foreignWord;
-        let englishWord = dataBase[storedDayOfMonth].englishWord;
-        let foreignSentence = dataBase[storedDayOfMonth].foreignSentence;
-        let englishSentence = dataBase[storedDayOfMonth].englishSentence;
+        
     
-        document.getElementById('foreign-word').innerHTML = foreignWord;
-        document.getElementById('english-word').innerHTML = englishWord;
-        document.getElementById('foreign-sentence-change').innerHTML = foreignSentence;
-        document.getElementById('english-sentence-change').innerHTML = englishSentence;
+        
     })    
     
     //gets rid of the badge
