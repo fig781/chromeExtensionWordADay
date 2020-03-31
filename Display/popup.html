@@ -9,19 +9,17 @@
         padding: 0px;
         width: 640px;
         height: 180px;
-        background-color:rgb(241, 241, 238);
-        
+        background-color:rgb(241, 241, 238);   
       }
+
       #content{
         margin: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         margin-right: -50%;
-        transform: translate(-50%, -50%);
-        
+        transform: translate(-50%, -50%);  
       }
-
 
       #heading-box{
         text-align: center;
@@ -29,49 +27,53 @@
         padding-bottom:8px;
         border-bottom: 1px solid black;
       }
+
       #heading-box h1{
         display:inline;
       }
+
       #language{
         color:slateblue;
       }
-
 
       #words-box{
         margin-bottom: 6px;
         text-align: center;
       }
+
       #words-box h1{
         display:inline;
       }
 
-
       #foreign-sentence-box{
         margin-bottom: 6px;
       }
+
       #foreign-sentence-box h2,p{
         display:inline;
       }
+
       #english-sentence-box h2,p{
         display:inline;
       }
 
-
       p{
         font-size: medium;
       }
+
       #options{
         position: absolute;
         bottom: 0;
         right: 0;
         height:24px;
         width:24px;
-        
       }
+
       #options:hover{
         transition: 1.0s;
         transform: rotateZ(180deg);
       }
+
     </style>
   </head>
   <body>
@@ -95,9 +97,9 @@
           <p id='english-sentence-change'></p>
       </div>
     </div>
-    <input  type="image" id="options" src="optionsIcon.png"></input>
+    <input  type="image" id="options" src="/Display/Resources/optionsIcon.png"></input>
     
-    <script src='popup.js'></script>
+    <script  type='module' src='../Scripts/popup.js'></script>
     
   </body> 
 </html>

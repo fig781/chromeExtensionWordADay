@@ -6,26 +6,26 @@
     "author": "Aden Eilers",
     "permissions": ["storage"],
     "options_ui": {
-      "page": "options.html",
+      "page": "/Display/options.html",
       "oper_in_tab": false
     },
     "background": {
-        "scripts": ["background.js"],
+        "scripts": ["/Scripts/background.js"],
         "persistent": false
       },
     "browser_action": {
-        "default_popup": "popup.html",
+        "default_popup": "/Display/popup.html",
         "default_icon": {
-            "16": "LearnfluentICON48pSquare.png",
-            "32": "LearnfluentICON48pSquare.png",
-            "48": "LearnfluentICON48pSquare.png",
-            "128": "LearnfluentICON128pSquare.png"
+            "16": "/Display/Resources/LearnfluentICON48pSquare.png",
+            "32": "/Display/Resources/LearnfluentICON48pSquare.png",
+            "48": "/Display/Resources/LearnfluentICON48pSquare.png",
+            "128": "/Display/Resources/LearnfluentICON128pSquare.png"
             }
       },
     "icons": {
-    "16": "LearnfluentICON48pSquare.png",
-    "32": "LearnfluentICON48pSquare.png",
-    "48": "LearnfluentICON48pSquare.png",
-    "128": "LearnfluentICON128pSquare.png"
+    "16": "/Display/Resources/LearnfluentICON48pSquare.png",
+    "32": "/Display/Resources/LearnfluentICON48pSquare.png",
+    "48": "/Display/Resources/LearnfluentICON48pSquare.png",
+    "128": "/Display/Resources/LearnfluentICON128pSquare.png"
     }
   }
